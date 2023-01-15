@@ -1,32 +1,112 @@
-let insertName = prompt("Lütfen Adınızı Giriniz.");
-let myName = document.querySelector("#myName");
-if(insertName == ""){
-    alert("Lütfen Bilgilerinizi Kontrol Ediniz!");
-    window.location.reload();
-}
-myName.innerHTML = insertName;
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+        crossorigin="anonymous"
+        />
+        <title>Kodluyoruz Javascript Saat Ödevi</title>
+        <style> 
+            body {
+            background: black;
+            }
+
+            .clock {
+            position: relative;
+            text-align: center;
+            color: #e98208;
+            font-size: 40px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 7px;
+            }
+
+            .text1 {
+            position: relative;
+            text-align: center;
+            color: #e98208;
+            font-size: 40px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 7px;
+            }
+
+            .text2 {
+            position: relative;
+            text-align: center;
+            color: #e98208;
+            font-size: 25px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 7px;
+            margin-right: 100px;
+            margin-left: 100px;
+            }
+
+            img {
+                margin-top: 120px;
+                width: 30%;
+            }
+        </style>
+        </head>
+    </head>
+    <body class="bg-dark">
+        <div class="text-center">
+            <img
+                src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+                alt=""
+                class="rounded"
+            />
+            <div class="text1 text-center">
+                Merhaba, <strong><span id="myName"></span></strong>! Hoş geldin!
+            </div>
+            <div id="myClock" class="clock" onload="showTime()"></div>
+            <div class="text2 text-center">tarihinde
+                <strong>Kodluyoruz Frontend Web Development Patikası</strong>'nın
+                Javascript bölümü 1. Ödevindesiniz.
+            </div>
+        </div>
+        <script>
+            let insertName = prompt("Lütfen Adınızı Giriniz.");
+            let myName = document.querySelector("#myName");
+            if(insertName == ""){
+                alert("Lütfen Bilgilerinizi Kontrol Ediniz!");
+                window.location.reload();
+            }
+            myName.innerHTML = insertName;
 
 
 
-let days = ["Pazar", "Pazartesi", "Salı" , "Çarşamba" , "Perşembe", "Cuma" , "Cumartesi"];
-function checkTime(x){
-    if(x < 10){
-      x = "0" + x;
-    }; 
-    return x;
-}
+            let days = ["Pazar",
+            "Pazartesi",
+            "Salı",
+            "Çarşamba",
+            "Perşembe",
+            "Cuma",
+            "Cumartesi"];
+            function checkTime(x){
+                if(x < 10){
+                x = "0" + x;
+                }; 
+                return x;
+            }
 
-(function theTime() {
-    const now = new Date();
-    let date = now.getDate();
-    let sec = now.getSeconds();
-    let min = now.getMinutes();
-    let hour = now.getHours();
-    let day = now.getDay();
+            (function theTime(){
+                const now = new Date();
+                let date = now.getDate();
+                let sec = now.getSeconds();
+                let min = now.getMinutes();
+                let hour = now.getHours();
+                let day = now.getDay();
 
-    sec = checkTime(sec);
-    min = checkTime(min);
-    document.querySelector("#myClock").innerHTML = `${hour}:${min}:${sec} ${days[day]} `;
-    setTimeout(theTime, 1000);
-})()
-console.log(theTime);
+                sec = checkTime(sec);
+                min = checkTime(min);
+                document.querySelector("#myClock").innerHTML = `${hour}:${min}:${sec} ${days[day]} `;
+                setTimeout(theTime, 1000);
+            })()
+        </script>
+  </body>
+</html>
+
