@@ -75,7 +75,7 @@
                 alert("Lütfen Bilgilerinizi Kontrol Ediniz!");
                 window.location.reload();
             }
-            myName.innerHTML = insertName;
+            myName.innerHTML = insertName.toUpperCase();
 
 
 
