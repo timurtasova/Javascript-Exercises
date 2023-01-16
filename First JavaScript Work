@@ -103,6 +103,7 @@
 
                 sec = checkTime(sec);
                 min = checkTime(min);
+                hour = checkTime(hour);
                 document.querySelector("#myClock").innerHTML = `${hour}:${min}:${sec} ${days[day]} `;
                 setTimeout(theTime, 1000);
             })()
