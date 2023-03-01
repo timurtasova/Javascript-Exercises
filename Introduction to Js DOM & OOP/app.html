@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <div class="card" id="form-card">
+        <h5 class="card-header text-center">Wellcome</h5>
+        <div class="card-body" id="userForm">
+            <h5 class="card-title mb-3">Your Informations</h5>
+            <div class="input-group">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-name">Your Name:</span>
+                    <input type="text" id="userName" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="min 3 characters">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Your Surname:</span>
+                    <input type="text" id="userSurname" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="min 3 characters">
+                </div>
+                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                    <option selected>Choose your topic..</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="SQL">SQL</option>
+                </select>
+            </div>
+            <button type="submit" id="submit" class="btn btn-primary mt-3">Submit</button>
+            <div id="alert" class="mt-1"></div>
+        </div>
+    </div>
+
+    <div class="btn-start inactive">
+        <h3 id="start-text" class="text-info"></h3>
+        <div class="alert alert-warning" role="alert"><strong>Remember!</strong> If you want to be successful, you have to answer at least 3 questions correctly..</div>
+        <button class="btn btn-lg btn-info text-white" id="btnStart">Start Quiz</button>
+    </div>
+
+    <div id="quiz-card" class="inactive">
+        <div class="card-title mb-3">
+            <span id="quiz-topic"></span>
+            <h3 id="question"></h3>
+        </div>
+        <div class="card-body">
+            <div id="quizChoises">
+                <div class="p-3 font-weight-bold choises">
+                    <input type="radio" id="a" name="answers" class="answer">
+                    <label for="a" id="textA" class="answer_text">AA</label>
+                </div>
+                <div class="p-3 font-weight-bold choises">
+                    <input type="radio" id="b" name="answers" class="answer">
+                    <label for="b" id="textB" class="answer_text">AA</label>
+                </div>
+                <div class="p-3 font-weight-bold choises">
+                    <input type="radio" id="c" name="answers" class="answer">
+                    <label for="c" id="textC" class="answer_text">AA</label>
+                </div>
+                <div class="p-3 font-weight-bold choises">
+                    <input type="radio" id="d" name="answers" class="answer">
+                    <label for="d" id="textD" class="answer_text">AA</label>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-success mt-3" id="next-question">Next</button>
+    </div>
+
+
+    <div class="card inactive card-result p-3" id="result">
+        <div class="card-title">
+            <h2 id="user-info" class="text-white"></h2>
+            <p id="user-result" class="text-white p-3 mb-2"></p>
+        </div>
+        <div class="card-body container" id="user-result-panel">
+            <div class="btn-again">
+                <button class="btn btn-lg btn-info text-white" id="again">Do It Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
