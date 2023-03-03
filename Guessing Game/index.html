@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="score-table">
+                <li class="score alert"><i class="fa-solid fa-flag-checkered"></i> Score: <span id="score">0</span></li>
+                <li class="highscore alert alert-info"><i class="fa-solid fa-medal text-danger"></i> Highscore: <span id="highscore">0</span></li>
+                <li><button id="reset" class="btn btn-primary">Reset Score</button></li>
+            </ul>
+        </nav>
+        <div class="game-head">
+            <h1 id="game-title">Guess the Number</h1>
+        </div>    
+        <div class="guess-area">
+            <span id="secret-number" class="alert">?</span>
+        </div>
+        <div class="true-number">
+            <span id="real-number" class="inactive">1</span>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="numbers">
+            <button id="card1" class="cards">1</button>
+            <button id="card2" class="cards">2</button>
+            <button id="card3" class="cards">3</button>
+        </div>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
