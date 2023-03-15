@@ -1,6 +1,3 @@
-// I need to learn use API's. Because when I wanted to restart the game I noticed that there was no data in the array("icons"). So, I will...
-
-
 "use strict";
 
 
