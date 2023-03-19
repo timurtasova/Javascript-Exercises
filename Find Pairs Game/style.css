@@ -6,7 +6,7 @@ body {
     height: 100vh;
     background-color: #98DFD6;
 }
-  
+
 .container {
     width: 500px;
     display: flex;
@@ -14,13 +14,13 @@ body {
     justify-content: center;
     align-items: center;
 }
-  
+
 .box {
     width: 100px;
     margin: 5px;
     height: 100px;
     color: #98DFD6;
-    background-color: #E21818;
+    background-color: #a12b2b;
     border: 1px solid #98DFD6;
     border-radius: 10px;
     display: flex;
@@ -28,15 +28,22 @@ body {
     align-items: center;
     cursor: pointer;
     user-select: none;
+    transition: all 0.3s ease-in;
+}
+
+.active {
+    background-color: #E21818;
 }
 
 .active:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
 .active:active {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-  
+
+
 .hidden {
     display: none;
     user-select: none;
@@ -44,11 +51,11 @@ body {
 
 i {
     font-size: 35px;
-    color: #FFDD83; 
+    color: #FFDD83;
     transition: all 0.5s ease-in;
 }
 
-#restart {
+.restart {
     cursor: pointer;
     color: #FFDD83;
     background-color: #E21818;
@@ -57,11 +64,16 @@ i {
     padding: 10px;
     transition: all .5s ease-in-out;
 }
-/* #restart:hover {
-    color: #E21818;
-    background-color: #FFDD83;
-    border: 1px solid #E21818;
-} */
+.again {
+    color: #fff;
+    background-color: green;
+    padding: 30px;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    font-size: 25px;
+}
+
 .visible {
-    display: inline-block !important;
+    display: inline-block;
 }
