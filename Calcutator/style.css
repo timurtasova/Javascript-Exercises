@@ -1,0 +1,124 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Orbitron:wght@400;700&family=PT+Mono&family=Poppins:wght@200;400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9F5EB;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    width: 30%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #E4DCCF;
+    padding: 0.8rem;
+    border: 3px solid #002B5B;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.calc-screen {
+    font-family: 'PT Mono', monospace, sans-serif;
+    width: 100%;
+    height: 30%;
+    border: 1px solid #002B5B;
+    color: #002B5B;
+    font-size: 1.2rem;
+    text-align: end;
+    text-overflow: ellipsis;
+    text-indent: -200%;
+    pointer-events: none;
+}
+.danger{
+    transition: 0.8s ease;
+    background-color: #EA5455;
+}
+.actions {
+    width: 100%;
+    height: 70%;
+    margin-top: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.numbers {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.processes {
+    width: 28%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    border: 1px solid #002B5B;
+    border-radius: 0.5rem;
+    color: #002B5B;
+    margin: 0.1rem;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: rgba(12, 2, 153, 0.4) -2px 2px, rgba(135, 6, 167, 0.3) -2px 2px, rgba(240, 46, 170, 0.2) -1px 1px, rgba(240, 46, 170, 0.1) -1px 1px, rgba(240, 46, 170, 0.05) -1px 1px;
+}
+
+button:not(#clear, #equal):hover {
+    background-color: #002B5B;
+    color: #EA5455;
+}
+
+.numbers button {
+    padding: 0.8rem 0;
+    width: 30%;
+    height: 30%;
+    font-size: 1.3rem;
+}
+#dot {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.processes button {
+    padding: 0.4rem 0;
+    font-size: 1.5rem;
+    background-color: #98DFD6;
+}
+
+#clear {
+    background-color: #EA5455;
+    font-weight: bold;
+}
+#equal {
+    background-color: green;
+    color: #F9F5EB;
+}
+#clear:hover {
+    color: #EA5455;
+    background-color: #002B5B;
+}
+#equal:hover {
+    background-color: #F9F5EB;
+    color: green;
+}
+#equal:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
