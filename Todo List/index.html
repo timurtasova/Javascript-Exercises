@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="filter-group">
+            <div class="filters">
+                <span id="all" class="active">All</span>
+                <span id="completed">Completed</span>
+                <span id="pending">Pending</span>
+            </div>
+            <div class="filter-input-group">
+                <label for="filter">Look For:</label>
+                <input type="text" id="filter" placeholder="Task Name">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form class="input-group">
+            <select name="select" id="select">
+                <option value="Schedule" selected>Schedule</option>
+                <option value="Daily">Daily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
+            </select>
+            <input type="text" id="input-task" placeholder="Task name">
+            <button type="submit" id="add-new-task">
+                <i class="fas fa-plus"></i>
+            </button>
+        </form>
+        <div class="task-list">
+            <ul class="task-list-header">
+                <li class="taskName">Task</li>
+                <li>Schedule</li>
+                <li>Status</li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
